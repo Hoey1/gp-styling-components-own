@@ -9,3 +9,5 @@ const StyledContainer = styled.div`
   padding: 16px 8px 12px 16px;
   background-color: white;
 `
+
+export default StyledContainer

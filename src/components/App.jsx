@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 // reactstrap
 
 // Import our styled components
+import StyledContainer from './Container'
 
 // No sense in re-creating this at every render of App
 const initialFormValues = {
@@ -51,29 +52,29 @@ export default function App(props) {
   ////////// JSX //////////
   ////////// JSX //////////
   return (
-    <div className='container'>
+    <StyledContainer>
       <p>The count is: <span style={makeStyles(count).bigSpan}>{count}</span></p>
       <p>Your username is: <span style={makeStyles(count).bigSpan}>{formValues.username}</span></p>
       <p>Your email is: <span style={makeStyles(count).bigSpan}>{formValues.email}</span></p>
 
-      <div className='container'>
+      <StyledContainer>
         <button id='incButton' onClick={onCountIncrease}>increase</button>
         <button onClick={onResetEverything}>reset everything</button>
-      </div>
+      </StyledContainer>
 
-      <div className='container'>
+      <StyledContainer>
         <label>User:&nbsp;
           <input name='username' value={formValues.username} onChange={onInputChange} />
         </label><br />
         <label>Email:&nbsp;
           <input name='email' value={formValues.email} onChange={onInputChange} />
         </label>
-      </div>
+      </StyledContainer>
 
-      <div className='container'>
+      <StyledContainer>
         <span style={makeStyles(count).funkySpan}>❤</span>&nbsp;
         <a href="#">subscribe</a>
-      </div>
-    </div>
+      </StyledContainer>
+    </StyledContainer>
   )
 }
