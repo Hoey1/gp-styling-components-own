@@ -63,10 +63,10 @@ export default function App(props) {
       <StyledContainer>
         <Alert color="primary">
           This is a primary alert — check it out!
-      </Alert>
+        </Alert>
         <Alert color="secondary">
           This is a secondary alert — check it out!
-      </Alert>
+        </Alert>
 
         <p>The count is: <span style={makeStyles(count).bigSpan}>{count}</span></p>
         <p>Your username is: <span style={makeStyles(count).bigSpan}>{formValues.username}</span></p>
