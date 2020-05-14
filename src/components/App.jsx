@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 
 // reactstrap
 
@@ -24,6 +25,10 @@ function makeStyles(count) {
     }
   }
 }
+
+const StyledApp = styled.div`
+  
+`
 
 export default function App(props) {
   ////////// STATE //////////
@@ -53,29 +58,31 @@ export default function App(props) {
   ////////// JSX //////////
   ////////// JSX //////////
   return (
-    <StyledContainer>
-      <p>The count is: <span style={makeStyles(count).bigSpan}>{count}</span></p>
-      <p>Your username is: <span style={makeStyles(count).bigSpan}>{formValues.username}</span></p>
-      <p>Your email is: <span style={makeStyles(count).bigSpan}>{formValues.email}</span></p>
-
-      <StyledContainer count={count}>
-        <Button count={count} id='incButton' onClick={onCountIncrease}>increase</Button>
-        <Button count={count} scream onClick={onResetEverything}>reset everything</Button>
-      </StyledContainer>
-
+    <StyledApp>
       <StyledContainer>
-        <label>User:&nbsp;
-          <input name='username' value={formValues.username} onChange={onInputChange} />
-        </label><br />
-        <label>Email:&nbsp;
-          <input name='email' value={formValues.email} onChange={onInputChange} />
-        </label>
-      </StyledContainer>
+        <p>The count is: <span style={makeStyles(count).bigSpan}>{count}</span></p>
+        <p>Your username is: <span style={makeStyles(count).bigSpan}>{formValues.username}</span></p>
+        <p>Your email is: <span style={makeStyles(count).bigSpan}>{formValues.email}</span></p>
 
-      <StyledContainer alert>
-        <span style={makeStyles(count).funkySpan}>❤</span>&nbsp;
+        <StyledContainer count={count}>
+          <Button count={count} id='incButton' onClick={onCountIncrease}>increase</Button>
+          <Button count={count} scream onClick={onResetEverything}>reset everything</Button>
+        </StyledContainer>
+
+        <StyledContainer>
+          <label>User:&nbsp;
+          <input name='username' value={formValues.username} onChange={onInputChange} />
+          </label><br />
+          <label>Email:&nbsp;
+          <input name='email' value={formValues.email} onChange={onInputChange} />
+          </label>
+        </StyledContainer>
+
+        <StyledContainer alert>
+          <span style={makeStyles(count).funkySpan}>❤</span>&nbsp;
         <a href="#">subscribe</a>
+        </StyledContainer>
       </StyledContainer>
-    </StyledContainer>
+    </StyledApp>
   )
 }
