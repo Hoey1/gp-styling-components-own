@@ -10,6 +10,19 @@ const initialFormValues = {
   email: '',
 }
 
+///////// STYLE MAKER ////////
+function makeStyles(count) {
+  return {
+    bigSpan: {
+      fontSize: `1.3em`,
+      color: `${count % 2 === 0 ? 'green' : 'red'}`
+    },
+    funkySpan: {
+      color: 'crimson'
+    }
+  }
+}
+
 export default function App(props) {
   ////////// STATE //////////
   ////////// STATE //////////
@@ -34,27 +47,14 @@ export default function App(props) {
     setCount(0)
   }
 
-  ///////// STYLE MAKER ////////
-  function makeStyles() {
-    return {
-      bigSpan: {
-        fontSize: `1.3em`,
-        color: `${count % 2 === 0 ? 'green' : 'red'}`
-      },
-      funkySpan: {
-        color: 'crimson'
-      }
-    }
-  }
-
   ////////// JSX //////////
   ////////// JSX //////////
   ////////// JSX //////////
   return (
     <div className='container'>
-      <p>The count is: <span style={makeStyles().bigSpan}>{count}</span></p>
-      <p>Your username is: <span style={makeStyles().bigSpan}>{formValues.username}</span></p>
-      <p>Your email is: <span style={makeStyles().bigSpan}>{formValues.email}</span></p>
+      <p>The count is: <span style={makeStyles(count).bigSpan}>{count}</span></p>
+      <p>Your username is: <span style={makeStyles(count).bigSpan}>{formValues.username}</span></p>
+      <p>Your email is: <span style={makeStyles(count).bigSpan}>{formValues.email}</span></p>
 
       <div className='container'>
         <button id='incButton' onClick={onCountIncrease}>increase</button>
@@ -71,7 +71,7 @@ export default function App(props) {
       </div>
 
       <div className='container'>
-        <span style={makeStyles().funkySpan}>❤</span>&nbsp;
+        <span style={makeStyles(count).funkySpan}>❤</span>&nbsp;
         <a href="#">subscribe</a>
       </div>
     </div>
