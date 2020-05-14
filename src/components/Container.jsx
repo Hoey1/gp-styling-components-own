@@ -18,6 +18,14 @@ const StyledContainer = styled.div`
     }
     return 'white'
   }};
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  a {
+    color: 'green';
+  }
 `
 
 export default StyledContainer
