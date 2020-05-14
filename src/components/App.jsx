@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 // reactstrap
+import { Alert } from 'reactstrap'
 
 // Import our styled components
 import StyledContainer from './Container'
@@ -60,6 +61,13 @@ export default function App(props) {
   return (
     <StyledApp>
       <StyledContainer>
+        <Alert color="primary">
+          This is a primary alert — check it out!
+      </Alert>
+        <Alert color="secondary">
+          This is a secondary alert — check it out!
+      </Alert>
+
         <p>The count is: <span style={makeStyles(count).bigSpan}>{count}</span></p>
         <p>Your username is: <span style={makeStyles(count).bigSpan}>{formValues.username}</span></p>
         <p>Your email is: <span style={makeStyles(count).bigSpan}>{formValues.email}</span></p>
