@@ -12,13 +12,8 @@ const StyledContainer = styled.div`
   border-radius: 8px;
   margin: 16px;
   padding: 16px 8px 12px 16px;
-  background-color: ${props => {
-    if (props.alert) {
-      return 'red'
-    }
-    return 'white'
-  }};
-  
+  background-color: ${props => props.alert ? 'red' : 'white'};
+
   &:hover {
     cursor: pointer;
   }
@@ -29,8 +24,9 @@ const StyledContainer = styled.div`
   }
 
   a {
-    color: 'green';
+    color: green;
     font-size: 3em;
+    background-color: black;
   }
 `
 
