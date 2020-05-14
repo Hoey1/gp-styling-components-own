@@ -18,11 +18,6 @@ const StyledContainer = styled.div`
     cursor: pointer;
   }
 
-  button {
-    border-radius: 4px;
-    padding: 4px;
-  }
-
   a {
     color: green;
     font-size: 3em;
