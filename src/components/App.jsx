@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 
 // Import our styled components
 import StyledContainer from './Container'
+import Button from './Button'
 
 // No sense in re-creating this at every render of App
 const initialFormValues = {
@@ -58,7 +59,7 @@ export default function App(props) {
       <p>Your email is: <span style={makeStyles(count).bigSpan}>{formValues.email}</span></p>
 
       <StyledContainer alert count={count}>
-        <button id='incButton' onClick={onCountIncrease}>increase</button>
+        <Button id='incButton' onClick={onCountIncrease}>increase</Button>
         <button onClick={onResetEverything}>reset everything</button>
       </StyledContainer>
 
@@ -76,5 +77,5 @@ export default function App(props) {
         <a href="#">subscribe</a>
       </StyledContainer>
     </StyledContainer>
-  )
+  )``
 }
