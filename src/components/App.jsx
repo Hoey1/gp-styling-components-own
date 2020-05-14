@@ -57,7 +57,7 @@ export default function App(props) {
       <p>Your username is: <span style={makeStyles(count).bigSpan}>{formValues.username}</span></p>
       <p>Your email is: <span style={makeStyles(count).bigSpan}>{formValues.email}</span></p>
 
-      <StyledContainer>
+      <StyledContainer alert count={count}>
         <button id='incButton' onClick={onCountIncrease}>increase</button>
         <button onClick={onResetEverything}>reset everything</button>
       </StyledContainer>
