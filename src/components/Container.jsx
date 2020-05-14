@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   border-radius: 8px;
   margin: 16px;
   padding: 16px 8px 12px 16px;
-  background-color: ${props => props.alert ? 'red' : 'white'};
+  background-color: ${props => props.alert ? 'red' : 'inherit'};
 
   &:hover {
     cursor: pointer;
