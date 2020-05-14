@@ -58,9 +58,9 @@ export default function App(props) {
       <p>Your username is: <span style={makeStyles(count).bigSpan}>{formValues.username}</span></p>
       <p>Your email is: <span style={makeStyles(count).bigSpan}>{formValues.email}</span></p>
 
-      <StyledContainer alert count={count}>
-        <Button id='incButton' onClick={onCountIncrease}>increase</Button>
-        <button onClick={onResetEverything}>reset everything</button>
+      <StyledContainer count={count}>
+        <Button count={count} id='incButton' onClick={onCountIncrease}>increase</Button>
+        <Button count={count} scream onClick={onResetEverything}>reset everything</Button>
       </StyledContainer>
 
       <StyledContainer>
@@ -72,10 +72,10 @@ export default function App(props) {
         </label>
       </StyledContainer>
 
-      <StyledContainer>
+      <StyledContainer alert>
         <span style={makeStyles(count).funkySpan}>❤</span>&nbsp;
         <a href="#">subscribe</a>
       </StyledContainer>
     </StyledContainer>
-  )``
+  )
 }

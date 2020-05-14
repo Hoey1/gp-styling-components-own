@@ -5,10 +5,19 @@
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
+  text-transform: ${props => {
+    if (props.scream) {
+      return 'uppercase'
+    }
+    return 'lowercase'
+  }};
   background-color: white;
   color: red;
   border-radius: 4px;
   padding: 4px;
+  font-size: ${props => {
+    return 20 * (Math.random() * props.count)
+  }}px;
   &:hover {
     border-radius: 12px;
     background-color: red;
